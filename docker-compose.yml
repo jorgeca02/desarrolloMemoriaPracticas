@@ -1,0 +1,53 @@
+services:
+  front:
+    image: node:18
+    ports:
+      - 3000:3000
+    volumes:
+      - ./front:/usr/src
+    command: bash -c "cd /usr/src && npm run dev"
+  apilibros:
+    build: ./apilibros/ApiLibros
+    container_name: apilibros
+    environment:
+      ASPNETCORE_URLS: http://+:5101
+    env_file:
+      - docker-compose.env	
+    ports:
+      - "5101:5101"
+  apiautores:
+    build: ./apiautores/ApiAutores
+    container_name: apiautores
+    environment:
+      ASPNETCORE_URLS: http://+:5102
+    env_file:
+      - docker-compose.env
+    ports:
+      - "5102:5102"
+  apieditoriales:
+    build: ./apieditoriales/ApiEditoriales
+    container_name: apieditoriales
+    environment:
+      ASPNETCORE_URLS: http://+:5103
+    env_file:
+      - docker-compose.env	
+    ports:
+      - "5103:5103"
+  apipersonas:
+    build: ./apipersonas/ApiPersonas
+    container_name: apipersonas
+    environment:
+      ASPNETCORE_URLS: http://+:5104	
+    env_file:
+      - docker-compose.env
+    ports:
+      - "5104:5104"
+  apichat:
+    build: ./apichat/ApiChat
+    container_name: apichat
+    environment:
+      ASPNETCORE_URLS: http://+:5105	
+    env_file:
+      - docker-compose.env
+    ports:
+      - "5105:5105"

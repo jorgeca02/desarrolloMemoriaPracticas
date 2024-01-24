@@ -1,0 +1,9 @@
+[submodule "apilibros"]
+	path = apilibros
+	url = https://github.com/jorgeca02/ApiLibros
+[submodule "apieditoriales"]
+	path = apieditoriales
+	url = https://github.com/jorgeca02/ApiEditorial.git
+[submodule "apiautores"]
+	path = apiautores
+	url = C:\\DesarolloPracticas\\apiautores

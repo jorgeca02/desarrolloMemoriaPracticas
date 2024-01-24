@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\pages",
+    "\\src\\pages\\addLibro",
+    "\\src\\pages\\chats",
+    "\\src\\pages\\main",
+    "\\src\\pages\\perfil",
+    "\\src\\styles"
+  ],
+  "SelectedNode": "\\src\\pages\\perfil\\[id].tsx",
+  "PreviewInSolutionExplorer": false
+}

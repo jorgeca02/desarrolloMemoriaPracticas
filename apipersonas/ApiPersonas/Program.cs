@@ -1,0 +1,68 @@
+using ApiPersonas.Data;
+using ApiPersonas.Mapper;
+using ApiPersonas.Repositorio;
+using ApiPersonas.Repositorio.IRepositorio;
+using ApiPersonas.Servicio;
+using ApiPersonas.Servicio.IServicio;
+using Microsoft.EntityFrameworkCore;
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+//Conexion base de datos sql server
+builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
+{
+    opciones.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql"));
+});
+
+
+//Agregar repositorios
+builder.Services.AddScoped<IPersonasRepositorio, PersonasRepositorio>();
+
+//Agregar AutoMapper
+builder.Services.AddAutoMapper(typeof(PersonasMapper));
+
+builder.Services.AddCors(options=>
+{
+    options.AddPolicy("AllowConfiguredOrigins",
+        corsBuilder =>
+        {
+            var corsOrigins = builder.Configuration.GetSection("CorsOrigins").Get<string[]>();
+            corsBuilder.WithOrigins(corsOrigins)
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+        });
+});
+
+// Add services to the container.
+
+// Obtain the API settings
+var routeApiLibros = builder.Configuration.GetSection("ApiSettings")["routeApiLibros"];
+// Add the ServicioPersonas with the API settings
+builder.Services.AddScoped<IServicioPersonas>(_ => new ServicioPersonas(routeApiLibros));
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.EnableAnnotations();
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
+
+
+app.UseHttpsRedirection();
+app.UseCors("AllowConfiguredOrigins");
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

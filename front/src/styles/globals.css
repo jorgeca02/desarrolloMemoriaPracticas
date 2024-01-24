@@ -1,0 +1,436 @@
+.LoginBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5; 
+}
+.LoginScreen {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.LoginForm {
+    text-align: center;
+}
+.LoginTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.LoginUserName,
+.LoginPassword {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.aviso {
+    margin-bottom: 15px;
+    color: #888;
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+.SignInButton,
+.LogInButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.LoginMensaje {
+    margin-top: 15px;
+    color: #ff0000;
+}
+.MainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.botonTop1,
+.botonTop2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.MainSearchSpace {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.MainSearchTitle,
+.MainSearchAutor,
+.MainSearchEditorial,
+.MainSearchCiudad,
+.MainSearchCodigoPostal {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.botonSearch {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.loading {
+    margin-top: 20px;
+}
+.bookListMain {
+    width: 100%;
+}
+.bookListTitleMain {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.libro {
+    width: 100%;
+}
+.LibroYBoton {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.libroIn {
+    display: flex;
+    flex-direction: column;
+    width:80%
+}
+.DatosCiudad {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.LibroData {
+    display: flex;
+    flex-direction: column;
+    width:20%;
+}
+.libroInfo {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.MainBookTit {
+    font-size: 18px;
+}
+.MainBookDesc,
+.MainBookAuth,
+.MainBookEd {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.DataYCiudad{
+    display: flex;
+    flex-direction: row;
+}
+.MainBookCiu,
+.MainBookCP {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.MainChatButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.listOrLoading {
+    width:100%;
+}
+.ProfileContainer {
+    display: flex;
+    width: 100%;
+}
+.ProfileForm {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ProfileBookList {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-left: 20px;
+}
+.inputProfile {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.LibroPers {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #fff; 
+    transition: transform 0.2s ease-in-out;
+}
+.LibroPers:hover {
+    transform: scale(1.05);
+}
+.LibroPersContent {
+    padding: 20px;
+    flex-grow: 1; 
+}
+.LibroPersTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.LibroPersDescription {
+    margin-bottom: 10px;
+    color: #555;
+}
+.LibroPersAuthor,
+.LibroPersEditorial {
+    font-weight: bold;
+}
+.deleteButton {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e74c3c; 
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+.deleteButton:hover {
+    background-color: #c0392b; 
+}
+.addLibroButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.botonTop1,
+.botonTop2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+.botonTop1:hover,
+.botonTop2:hover {
+    background-color: #2c3a4a; 
+}
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+.chat-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.chat-header {
+    background-color: #2c3e50; 
+    padding: 15px;
+    color: #ecf0f1; 
+    border-bottom: 2px solid #34495e; 
+}
+.cabeceraTitle,
+.cabeceraAutor,
+.cabeceraPersona,
+.cabeceraCiudad {
+    margin: 5px 0;
+}
+.cabeceraCheck {
+    display: flex;
+    align-items: center;
+}
+.cabeceraCheckInput {
+    margin-left: 10px;
+}
+.chat-messages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; 
+}
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    word-wrap: break-word; 
+}
+.sent {
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    align-self: flex-end;
+}
+.received {
+    background-color: #ecf0f1; 
+    color: #2c3e50; 
+    align-self: flex-start;
+}
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-top: 2px solid #34495e; 
+}
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.enviarMensaje {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #34495e; 
+    color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+.enviarMensaje:hover {
+        background-color: #2c3a4a; 
+}
+.chat-list {
+    width: 250px;
+    background-color: #ecf0f1; 
+    padding: 20px;
+    overflow-y: auto; 
+}
+.chat-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out;
+}
+.chat-item:hover {
+    background-color: #bdc3c7; 
+}
+.chatLibroTitleList,
+.chatP2UserList {
+    margin: 0;
+    font-size: 18px;
+    flex-grow: 1; 
+}
+.divider {
+    height: 2px;
+    width: 100%;
+    background-color: #34495e;
+    margin: 0 15px;
+}
+.libroStatusIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 15px; 
+}
+.libroStatusLibre {
+    background-color: #27ae60; 
+}
+.libroStatusOcupado {
+    background-color: #e74c3c; 
+}
+.formContainer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+.inputGroup {
+    margin-bottom: 15px;
+}
+.inputLabel {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.selectDropdown,
+.addButton,
+.submitButton {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #95a5a6;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.addButton,
+.submitButton {
+    cursor: pointer;
+    background-color: #34495e;
+    color: #ecf0f1;
+    transition: background-color 0.2s ease-in-out;
+}
+.addButton:hover,
+.submitButton:hover {
+   background-color: #2c3a4a;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalContent {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+.closeButton {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+.closeButton:hover {
+    background-color: #2c3a4a;
+}
